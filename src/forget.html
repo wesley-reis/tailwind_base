@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+
+    <link rel="stylesheet" href="./assets/css/login.css">
+
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+
+</head>
+<body class="bg-blue-100">    
+    <div class="main-login">
+        <div class="main-login-company">
+            <div class="overlay"></div>
+            <img class="logo-company" src="./assets/image/logo-controll-rh-sem-fundo.png" alt="">
+        </div>
+        
+        <div class="login">
+            <div class="login-content">
+                <div class="p-12">
+                    <p class="login-title-sub">
+                        Recuperar senha
+                    </p>
+                    <p class="login-desc-sub">
+                        Informe seu e-mail para receber um link de recuperação.
+                    </p>
+                </div>
+
+                <div class="ajax_response"><?= flash(); ?></div>
+
+                <form action="" method="post">
+                <div class="form-login">
+                    <div class="div-input">
+                        <input placeholder="Infomer seu e-mail" name="emial" class="access-input" type="email" />
+                        <span class="input-icon"><i class="fa fa-envelope fa-sm text-gray-400"></i></span>
+                    </div>
+                </div>
+
+                <div class="form-botton">
+                    <div class="div-label">
+                        <a href="">Voltar e entrar!</a>
+                    </div>
+                    </div>
+                    <div class="w-100 mx-10 md:mx-0 p-4">
+                    <button class="btn-login">Recuperar</button>
+                    </div>
+                </form>      
+            </div>
+        </div>
+    </div>
+           
+</body>
+</html>

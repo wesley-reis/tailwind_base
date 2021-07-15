@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root{
+        --onstreet:rgba(18, 131, 23, 0.37);
+        --offstreet:rgba(223, 30, 30, 0.37);
+        --colorTitle:rgb(14, 84, 112);
+        --background:rgb(50, 157, 199);
+    }
+
+    .offstreet{
+        color: var(--offstreet);
+    }
+
+    .onstreet{
+        color: var(--onstreet);
+    }
+    
+    
+    
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+@layer components{
+
+    .header{
+
+        @apply absolute w-full;
+        background: rgb(15, 137, 185);
+        padding: 0px 20px;
+    }
+    
+    .header p{
+        @apply text-white text-base;
+        font-weight: 600;
+        margin: 10px;
+    }
+    .header i{
+        margin-right: 20px;
+    }
+    
+    .location i{
+        @apply mt-4;
+        font-size:2em;
+    }
+    
+    
+    .container{
+
+        @apply w-full h-full flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5rem;
+        z-index: 99;
+    }
+    
+    .home{
+        @apply mt-4 w-2/3 h-2/3;
+       background: rgba(255, 255, 255, 0);
+       text-align: center;
+        
+    }
+    
+    .title h3{
+        font-size: 3.8em;
+        font-weight: 600;
+        margin: -15px;
+        color: var(--colorTitle);
+    }
+    
+    .title p{
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-top: 30px;
+        color:var(--colorTitle);
+    }
+    
+    .form{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .email, .passwd, .btn{
+        margin: 20px;
+    }
+    
+    input{
+        @apply w-full text-center md:w-1/2;
+        font-size: 0.875em;
+        padding: 10px 0;
+        border: none;
+        border-bottom: 1px solid rgb(197, 194, 194);
+        color: rgb(117, 116, 116);
+    }
+    
+    input:focus{
+        outline-color: rgba(150, 62, 62, 0.0);
+    }
+    
+    .btn button{
+        @apply text-xs text-white rounded;
+        padding: 7px 20px;
+        font-weight: 500;
+        background:  rgb(15, 137, 185);
+        border: none;
+    }
+    
+    /**Biometria*/
+    .container-biometric{
+        @apply flex;
+        width: 100vw;
+        height: 100vw;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+        margin-top: -300px;
+    }
+    
+    .theme{
+        background: var(--background);
+        height: 300px;
+        z-index: 1;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 250px;
+    }
+    
+    .user p{
+        color: #ffffff;
+        font-weight: 400;
+        margin: 0;
+    }
+    
+    .user h3{
+        color: #ffffff;
+        font-weight: 400;
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+    
+    .title-biometric h3{
+        font-size: 3.8em;
+        font-weight: 600;
+        margin: -15px;
+        color: #ffffff;
+    }
+    
+    .title-biometric p{
+        @apply text-white mt-4;
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    
+    
+    .biometric i{
+        font-size: 5em;
+        margin-top: 50px;
+    }
+    
+    .point{
+        display: flex;
+        font-size: 0.875em;
+        font-weight: 400;
+        color: var(--colorTitle);
+        margin-left: -30px;
+        margin-top: 10px;
+    }
+    
+
+
+}

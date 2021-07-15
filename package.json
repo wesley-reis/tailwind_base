@@ -1,0 +1,25 @@
+{
+  "name": "tailwind-base",
+  "version": "1.0.0",
+  "description": "Iniciando projeto com Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "devLogin": "npx tailwindcss -i ./src/assets/css/main_login.css -o ./src/assets/css/login.css -w ",
+    "devDash": "npx tailwindcss -i ./src/assets/css/main_dash.css -o ./src/assets/css/dash.css -w ",
+    "devError": "npx tailwindcss -i ./src/assets/css/main_errors.css -o ./src/assets/css/errors.css -w ",
+    "devApp": "npx tailwindcss -i ./src/mobile/assets/css/main_app.css -o ./src/mobile/assets/css/mobile.css -w ",
+    
+    "miniLogin": "npx tailwindcss -i ./src/assets/css/main_login.css -o ./src/assets/css/login.min.css --minify"
+  },
+  "keywords": [],
+  "author": "wesley.Reis",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}

@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+
+    .input-icon{
+       position: absolute;
+    }
+
+    .main-login{
+        @apply grid grid-cols-1 lg:grid-cols-2;
+    }
+
+    .main-login-company{
+        @apply bg-rh-controll bg-cover lg:min-h-screen lg:flex lg:items-center;
+    }
+
+    .overlay{
+        @apply bg-black opacity-80 relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .logo-company{
+        @apply  absolute;
+        margin-left: 8%;
+        margin-top: -100px;
+    }
+
+    .login{
+        @apply bg-gradient-to-tl from-blue-400 via-blue-800  to-blue-800 lg:min-h-screen lg:flex lg:items-center;
+    }
+
+    .login-content{
+        @apply h-screen mx-auto max-w-md;
+
+    }
+
+    .login-title{
+        @apply text-5xl text-yellow-500 font-bold;
+        padding: 2.5rem 3rem 0 0;
+    }
+
+    .login-title-sub{
+        @apply text-4xl pt-10 text-yellow-500 font-bold;
+        text-align: center;
+    }
+
+    .login-desc{
+        @apply text-xl py-3 text-gray-400 font-semibold;
+    }
+
+    .login-desc-sub{
+        @apply py-3 text-gray-400 font-semibold;
+        font-size: 0.8rem;
+    }
+
+    .form-login{
+        @apply mx-12 pt-10 pb-10 rounded-xl shadow-sm bg-blue-900 md:mx-0;
+    }
+
+    .div-input{
+        @apply p-3 mx-6 border-b border-gray-500;
+        padding-right: 25px;
+    }
+
+    .access-input{
+        @apply bg-transparent text-yellow-500 w-full;
+    }
+
+    .access-input:focus{
+        @apply outline-none;
+    }
+
+    .form-botton{
+        @apply mx-12 p-3 flex justify-between md:mx-0;
+    }
+
+    .div-check{
+        @apply relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in;
+    }
+
+    .check-input{
+        @apply toggle-checkbox absolute block w-5 h-5 rounded-full bg-gray-800 border-4 appearance-none cursor-pointer;
+    }
+
+    .check-label{
+        @apply toggle-label block overflow-hidden h-5 rounded-full bg-yellow-500 cursor-pointer;
+    }
+
+    .div-label{
+        @apply mt-1 text-xs text-gray-400;
+    }
+
+    .gradiente-button{
+        @apply bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-400 
+    }
+    
+    .gradiente-button-hover{
+        @apply bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 
+    }
+
+    .btn-login{
+        @apply  gradiente-button text-white p-2 rounded-3xl w-full h-full transition-all;
+    
+    }
+    
+    .btn-login:hover{
+        @apply gradiente-button-hover;
+        
+    }
+   
+    .toggle-checkbox:checked {
+        @apply: right-0 border-green-400;
+        right: 0;
+        border-color: rgb(4, 241, 63);
+    }
+
+    .toggle-checkbox:checked + .toggle-label {
+        @apply: bg-green-400;
+        background-color: rgb(245, 158, 11);
+    }
+
+    /*MESSAGES*/
+    .message {
+        @apply text-xs font-semibold text-white block w-full text-center;
+        padding: 5px;
+        border: 1.7px solid #cccccc;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .ajax_response {
+        margin:5px 0;
+    }
+
+    .message.success {
+        --color: #38b396;
+        color: var(--color);
+        border-color: var(--color);
+    }
+
+    .message.info {
+        --color: #44A5EFFF;
+        color: var(--color);
+        border-color: var(--color);
+    }
+
+    .message.warning {
+        --color: #F5B946;
+        color: var(--color);
+        border-color: var(--color);
+    }
+
+    .message.error {
+        --color: #D94352;
+        color: var(--color);
+        border-color: var(--color);
+    }
+
+
+
+}

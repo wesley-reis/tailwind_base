@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/boot.css">
+    <link rel="stylesheet" href="./assets/css/dash.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+
+
+    <title>Dashboard</title>
+
+</head>
+<body class="bg-gray-300">
+
+    <header class="nav-top">
+        <a href="#">
+            <img src="./assets//image/logo-controll-rh-sem-fundo.png" width="200" alt="controll Rh">
+        </a>
+
+        <!--Notificações e Usuário-->
+        <div class="flex justify-between align-middle mr-4">
+
+            <!--Notificações-->
+            <nav class="mr-4 md:mr-8 mt-3">
+                <ul>
+                    <li>
+                        <i class="fas fa-bell bell-white bell-warning dropNotifi cursor-pointer" 
+                        onclick="myNotifi()"></i>
+
+                        <div id="notifiDropdown" class="dropdown-notifi">
+                            <p class="notify-title">Notificações</p>
+                            <hr>
+                            
+                            <div class="user-notify">
+                                <div class="div-user-photo">
+                                    <img class="user-photo" src="./assets/image/wesley.jpg" alt="wesley">
+                                </div>
+                                <div class="div-message">
+                                    <div class="message-date">
+                                        <p class="message-name">Wesley.Reis</p>
+                                        <p class="message-hour">2 hrs ago</p>
+                                    </div>
+                                    <a href="" class="message-text">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="user-notify">
+                                <div class="div-user-photo">
+                                    <img class="user-photo" src="./assets/image/wesley.jpg" alt="wesley">
+                                </div>
+                                <div class="div-message">
+                                    <div class="message-date">
+                                        <p class="message-name">Wesley.Reis</p>
+                                        <p class="message-hour">2 hrs ago</p>
+                                    </div>
+                                    <a href="" class="message-text">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="user-notify">
+                                <div class="div-user-photo">
+                                    <img class="user-photo" src="./assets/image/wesley.jpg" alt="wesley">
+                                </div>
+                                <div class="div-message">
+                                    <div class="message-date">
+                                        <p class="message-name">Wesley.Reis</p>
+                                        <p class="message-hour">2 hrs ago</p>
+                                    </div>
+                                    <a href="" class="message-text">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    </a>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <a class="btn-mais" href="#">Ver mais...</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Dados do Usuário-->
+            <ul>
+                <li class="dropdown">
+                    <a class="dropdownUser cursor-pointer" onclick="myUser()">
+                        <img class="image-user" src="./assets/image/wesley.jpg" alt="wesley">
+                        Wesley.Reis
+                    </a>
+                    <div id="userDropdown" class="dropdown-user">
+                        <a href="#"><i class="far fa-user-circle"></i>Meus dados</a>
+                        <a href="#"><i class="fas fa-envelope-open-text"></i>Mensagens</a>
+                        <a href="#"><i class="fas fa-user-shield"></i>Suport</a>
+                        <a href="#"><i class="fas fa-sign-out-alt last-child"></i>Sair</a>
+                    </div>
+                </li>
+                          
+            </ul>
+        </div>
+    </header>
+
+    <aside class="aside">
+        <div class="nav-aside">
+            <a href="#home" class="active"><i class="fa fa-chart-pie fa-lg"></i>Dashboard</a>
+
+            <a class="dropdown-btn"><i class="fab fa-buffer fa-lg"></i>Cadastros</a>
+            <div class="dropdown-container">
+                <a href="#">Funcionários</a>
+                <a href="#">Empresa</a>
+                <a href="#">Departamentos</a>
+                <a href="#">Cargos</a>
+                <a href="#">Centros de custo</a>
+                <a href="#">Motivo de demissão</a>
+                <a href="#">Modelos de Folhas</a>
+                <a href="#">Locais de trabalho</a>
+              </div>
+
+            <a class="dropdown-btn"><i class="far fa-clock fa-lg"></i>Config.Horários</a>
+            <div class="dropdown-container">
+              <a href="#">Horários</a>
+              <a href="#">Atualizações em massa</a>
+            </div>
+
+            <a href="#empresa"><i class="fab fa-font-awesome-flag fa-lg"></i>Empresa</a>
+              
+            <a href="#contact"><i class="fa fa-cog fa-lg"></i>Configurações</a>
+       </div>
+      
+        <div id="mySidenav">
+            <a href="#" class="child-1">Ver todos <i class="fa fa-search"></i></a>
+            <a href="#" class="child-2">Deletar <i class="fa fa-edit"></i></a>
+            <a href="#" class="child-3">Voltar <i class="fa fa-satellite"></i></a>
+            <a href="#" class="child-4" id="openModal">Modal <i class="fab fa-buffer"></i></a>
+            <a href="#" class="child-5">Contact</a>
+            <a href="#" class="child-6">Contact</a>
+            <a href="#" class="child-7">Contact</a>
+            <a href="#" class="child-8">Contact</a>
+        </div>
+       
+    </aside>
+      
+    
+    <main class="main pt-24 pl-12 pr-4">
+        <div class="main-content">
+            <p class="content-title"><i class="fa fa-user-plus"></i> Novo Funcionário</p>
+            <hr class="py-2">
+            
+            <div class="content">
+              <form enctype="multipart/form-data" autocomplete="off">
+
+                <div class="flex flex-col-reverse md:grid md:grid-cols-4 gap-4 mx-3">
+                  <div class="flex-col md:col-span-3">
+
+                    <div class="flex flex-col -space-x-0 md:flex-row md:space-x-6">
+                      <div class="input md:w-2/5">
+                        <input type="text" name="first_name" placeholder=" " required  class="input-input" />
+                        <label for="name" class="input-label">Nome</label>
+                        <span class="error"></span>
+                      </div>
+      
+                      <div class="input md:w-3/5">
+                        <input type="text" name="last_name" placeholder=" " required  class="input-input" />
+                        <label for="name" class="input-label">Sobrenome</label>
+                        <span class="error"></span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col -space-x-0 md:flex-row md:space-x-6">
+                      <div class="input md:w-1/3">
+                        <input type="text" name="first_name" placeholder=" " class="input-input" />
+                        <label for="name" class="input-label">PIS</label>
+                        <span class="error"></span>
+                      </div>
+      
+                      <div class="input md:w-1/3">
+                        <input type="text" name="last_name" placeholder=" " class="input-input" />
+                        <label for="name" class="input-label">Matricula</label>
+                        <span class="error"></span>
+                      </div>
+
+                      <div class="div-select-and-date md:w-1/3">
+                        <select name="select" value="" onclick="this.setAttribute('value', this.value);" class="select-option">
+                          <option value="" selected disabled hidden></option>
+                          <option value="1">Option 1</option>
+                          <option value="2">Option 2</option>
+                          <option value="3">Option 3</option>
+                          <option value="4">Option 4</option>
+                          <option value="5">Option 5</option>
+                        </select>
+                        <label for="select" class="select-label">Selecione uma empresa</label>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col -space-x-0 md:flex-row md:space-x-6">
+                      <div class="div-select-and-date md:w-3/12">
+                        <input type="text" name="date" placeholder=" " onclick="this.setAttribute('type', 'date');"
+                          class="input-input"/>
+                        <label for="date" class="input-label">Data admissão</label>
+                      </div>
+
+                      <div class="div-select-and-date md:w-3/6">
+                        <select name="select" value="" onclick="this.setAttribute('value', this.value);" class="select-option">
+                          <option value="" selected disabled hidden></option>
+                          <option value="1">Option 1</option>
+                          <option value="2">Option 2</option>
+                          <option value="3">Option 3</option>
+                        </select>
+                        <label for="select" class="select-label">Selecione um Horário</label>
+                      </div>
+
+                      <fieldset class="fild-radio md:w-2/6">
+                        <legend class="fild-legend">Condição</legend>
+                        <div class="fild-div-label">
+                          <input type="radio" id="radio1" name="radio" value="1" class="input-radio" />
+                          <label class="text-gray-400" for="radio1">Ativo</label>
+
+                          <input type="radio" id="radio2" name="radio" value="2" class="input-radio" />
+                          <label class="text-gray-400" for="radio2">Inativo</label>
+                        </div>
+                      </fieldset>
+                      
+                    </div>
+
+                  </div>
+
+                  <div class="flex flex-col justify-center items-center md:col-span-1">
+                    <div class="flex flex-col justify-center items-center">
+                      <img src="./assets/image/wesley.jpg" class="user-cover" alt="">
+                    </div>
+                    <div class="flex justify-center my-2">
+                      <label for="photo"><i class="fa fa-camera fa-sm text-blue-900"></i></label>
+                      <input type="file" id="photo" name="photo" hidden>
+                    </div>
+                  </div>
+
+                </div>
+         
+                <div class="flex flex-col md:flex-row gap-4">
+                  <div class="div-select-and-date md:w-1/3 mx-3">
+                    <select name="select" value="" onclick="this.setAttribute('value', this.value);" class="select-option">
+                      <option value="" selected disabled hidden></option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                      <option value="4">Option 4</option>
+                      <option value="5">Option 5</option>
+                    </select>
+                    <label for="select" class="select-label">Centro de Custo</label>
+                    <a href="#" class="btn-small"><i class="fa fa-plus"></i>Novo centro de Custo</a>
+                  </div>
+            
+                  <div class="div-select-and-date md:w-1/3 mx-3">
+                    <select name="select" value="" onclick="this.setAttribute('value', this.value);" class="select-option">
+                      <option value="" selected disabled hidden></option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                      <option value="4">Option 4</option>
+                      <option value="5">Option 5</option>
+                    </select>
+                    <label for="select" class="select-label">Departamento</label>
+                    <a href="#" class="btn-small"><i class="fa fa-plus"></i>Novo Departamento</a>
+                  </div>
+
+                  <div class="div-select-and-date md:w-1/3 mx-3">
+                    <select name="select" value="" onclick="this.setAttribute('value', this.value);" class="select-option">
+                      <option value="" selected disabled hidden></option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                      <option value="4">Option 4</option>
+                      <option value="5">Option 5</option>
+                    </select>
+                    <label for="select" class="select-label">Cargo/Função</label>
+                    <a href="#" class="btn-small"><i class="fa fa-plus"></i>Novo Cargo</a>
+                  </div>
+                </div>
+            
+                <div class="flex flex-col -space-x-0 md:flex-row md:space-x-6 mx-3">
+                  <div class="div-select-and-date md:w-1/4">
+                    <select name="select" value="" onclick="this.setAttribute('value', this.value);" class="select-option">
+                      <option value="" selected disabled hidden></option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                      <option value="4">Option 4</option>
+                      <option value="5">Option 5</option>
+                    </select>
+                    <label for="select" class="select-label">Nível de Acesso</label>
+                  </div>
+
+                  <div class="input md:w-1/4">
+                    <input type="text" name="first_name" placeholder=" " class="input-input" />
+                    <label for="name" class="input-label">CTPS</label>
+                    <span class="error"></span>
+                  </div>
+                </div>  
+
+                <div class="flex flex-col -space-x-0 md:flex-row md:space-x-6 mx-3">
+                  <div class="input md:w-1/2">
+                    <input type="email" name="email" placeholder=" " required class="input-input" />
+                    <label for="email" class="input-label">Enter email address</label>
+                    <span class="error"></span>
+                  </div>
+            
+                  <div class="input md:w-1/2">
+                    <input type="password" name="password" placeholder=" " class="input-input" />
+                    <label for="password" class="input-label">Enter password</label>
+                    <span class="error"></span>
+                  </div>
+                </div>
+                
+                <hr class="my-3">
+                
+                <div class="text-left mx-3">
+                  <button id="button" type="submit" class="btn-save">Cadastrar</button>
+                </div>
+
+
+
+                <div class="text-left mx-3 flex justify-between align-middle">
+
+                  <a href="#" class="btn-delete"><i class="fa fa-trash-alt"></i>Excluir</a>
+
+                  <button id="button" type="submit" class="btn-save">Cadastrar</button>
+
+                </div>
+
+
+              </form>  
+              </div>
+              
+            </div>
+        </div>
+
+
+           <!-- Config CheckButtons -->
+           <div class="flex">
+            <div class="div-check">
+                <input type="checkbox" name="save" id="check01" class="input-check" />
+                <label for="check01" class="text-gray-400">Validar</label>
+            </div>
+          </div>
+
+
+        <!-- MODAL -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content modal-lg modal-sm modal-md">
+            <div class="modal-header">
+              <h2>Modal Header</h2>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the Modal Body</p>
+              <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" type="button" class="btn-small-outline">Cadastrar</a>
+            </div>
+          </div>
+        
+        </div>
+
+    </main>
+</div>
+
+
+
+<script>
+    /* user */
+    function myUser() {
+        document.getElementById("userDropdown").classList.toggle("show");
+    }
+    
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdownUser')) {
+        var dropdowns = document.getElementsByClassName("dropdown-user");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+            }
+        }
+        }
+    }
+
+</script>
+
+<script>
+    /* NotifiDropdown */
+    function myNotifi() {
+        document.getElementById("notifiDropdown").classList.toggle("show");
+    }
+    
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropNotifi')) {
+        var dropdowns = document.getElementsByClassName("dropdown-notifi");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+            }
+        }
+        }
+    }
+
+</script>
+
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active-toggle");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+        
+<script>
+    const fields = document.querySelectorAll("[required]")
+
+    function ValidateField(field) {
+      // logica para verificar se existem erros
+      function verifyErrors() {
+      let foundError = false;
+
+      for(let error in field.validity) {
+        // se não for customError
+        // então verifica se tem erro
+        if (field.validity[error] && !field.validity.valid ) {
+          foundError = error
+        }
+       }
+      return foundError;
+    }
+
+    function customMessage(typeError) {
+      const messages = {
+        text: {
+          valueMissing: "Por favor, preencha este campo"
+        },
+        email: {
+          valueMissing: "Email é obrigatório",
+          typeMismatch: "Por favor, preencha um email válido"
+        },
+        tel: {
+          valueMissing:"Telefone é obrigatório"
+        }
+      }
+
+      return messages[field.type][typeError]
+    }
+
+    function setCustomMessage(message) {
+      const spanError = field.parentNode.querySelector("span.error")
+
+      if (message) {
+        spanError.classList.add("active-error")
+        spanError.innerHTML = message
+      } else {
+        spanError.classList.remove("active-error")
+        spanError.innerHTML = ""
+      }
+    }
+
+      return function() {
+
+        const error = verifyErrors()
+
+        if(error) {
+          const message = customMessage(error)
+
+          field.style.borderColor = "red"
+          setCustomMessage(message)
+        } else {
+          field.style.borderColor = "green"
+          setCustomMessage()
+        }
+      }
+    }
+
+
+    function customValidation(event) {
+
+      const field = event.target
+      const validation = ValidateField(field)
+
+      validation()
+
+    }
+
+    for( field of fields ){
+      field.addEventListener("invalid", event => { 
+      // eliminar o bubble
+      event.preventDefault()
+
+      customValidation(event)
+      })
+      field.addEventListener("blur", customValidation)
+    }
+
+
+  document.querySelector("form")
+    .addEventListener("submit", event => {
+    console.log("enviar o formulário")
+
+    // não vai enviar o formulário
+    event.preventDefault()
+  })
+</script>
+
+<script>
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("openModal");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+        
+</body>
+</html>

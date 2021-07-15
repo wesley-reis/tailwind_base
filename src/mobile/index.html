@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/mobile.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+
+    <title>App | Control RH</title>
+</head>
+<body>
+    <div class="header">
+        <p><i class="fas fa-bars"></i> Marcação de Ponto</p>
+    </div>
+    <div class="container">
+        <section class="home">
+            <div class="title">
+                <h3 id="hora">00:00:00</h3>
+                <p id="data">00/00/0000</p>
+            </div>
+            <div class="location">
+                <p><i class="fa fa-street-view offstreet"></i></p>
+            </div>
+            <form action="" method="POST" class="form" autocomplete="off">
+                <input type="text" id="latUser" name="lat_User">
+                <input type="text" id="lonUser" name="lon_User">
+
+                <div class="email">
+                    <input type="email" name="email" placeholder="Usuário">
+                </div>
+                <div class="passwd">
+                    <input type="password" name="password" placeholder="Senha">
+                </div>
+                <div class="btn">
+                    <button type="submit">REGISTRAR</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
